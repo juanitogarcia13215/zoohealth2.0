@@ -1,0 +1,76 @@
+.imagen{
+    width: 100px; /* Cambia esto al tamaño deseado */
+    height: auto;
+    align-items: center; /* Mantiene la proporción de la imagen */
+    /* Puedes agregar más estilos si lo deseas */
+}
+  .logo-text {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 100px;
+}
+.custom-card ion-card-header {
+  display: flex;            /* Alinea los elementos en fila */
+  align-items: center;       /* Centra verticalmente la imagen y el texto */
+  gap: 10px;                 /* Espacio entre la imagen y el texto */
+  padding: 20px;
+  color: rgb(255, 255, 255);
+}
+
+.custom-card img {
+  width: 100px;               /* Ajusta el tamaño de la imagen */
+  height: 100px;
+  border-radius: 8px;         /* Bordes redondeados */
+  object-fit: cover;          /* La imagen mantiene su proporción */
+}
+.principal {
+  width: 400px; 
+  position: relative;     /* Ancho del contenedor */
+  height: 200px;     /* Altura del contenedor */
+  overflow: hidden;  /* Oculta cualquier parte de la imagen que sobresalga */
+  display: flex;
+  justify-content: center; /* Centra la imagen horizontalmente */
+  align-items: center;     /* Centra la imagen verticalmente */
+}
+.principal img {
+  width: 100%;      /* La imagen ocupará todo el ancho del contenedor */
+  height: auto;     /* Mantiene la proporción de la imagen */
+  object-fit: cover; /* Ajusta la imagen para llenar el contenedor */
+}
+
+
+.image-container {
+  position: relative; /* Para permitir elementos hijos con posicionamiento absoluto */
+  width: 100%;
+  height: 50vh; /* Ocupa toda la pantalla */
+}
+
+.background-img {
+  width: 100%;
+  height: 100%; /* La imagen ocupa todo el contenedor */
+  object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+}
+
+.text-overlay {
+  position: absolute; /* Texto sobre la imagen */
+  top: 10%; /* Centrar verticalmente */
+  left: 10%; /* Centrar horizontalmente */
+  transform: translate(-50%, -50%); /* Ajuste final del centrado */
+  text-align: center;
+  color: rgb(0, 0, 0); /* Texto en blanco */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra del texto */
+}
+
+.text-overlay h1, 
+.text-overlay h2, 
+.text-overlay h3 {
+  margin: 10px 0; /* Espacio entre los textos */
+}
+
+

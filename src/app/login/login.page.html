@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Iniciar Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<div class="logo-text">
+  <img src="assets/img/Pegatina for Sale con la obra Veterinario de megnance27.jpeg" alt="logo">
+  <label for=""><h1>zooheath</h1></label>
+</div>
+
+
+
+
+<ion-content>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">Correo Electrónico</ion-label>
+      <ion-input formControlName="userEmail" type="email"></ion-input>
+    </ion-item>
+    <ion-note color="danger" *ngIf="loginFormValidators.userEmail.empty">
+      {{ loginFormValidators.userEmail.empty }}
+    </ion-note>
+    <ion-note color="danger" *ngIf="loginFormValidators.userEmail.email">
+      {{ loginFormValidators.userEmail.email }}
+    </ion-note>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input formControlName="userPassword" type="password"></ion-input>
+    </ion-item>
+    <ion-note color="danger" *ngIf="loginFormValidators.userPassword.empty">
+      {{ loginFormValidators.userPassword.empty }}
+    </ion-note>
+
+    
+    <ion-button expand="full" type="submit">Iniciar Sesión</ion-button>
+    <ion-button expand="full" routerLink="/registro">
+       registrase
+    </ion-button>
+  </form>
+
+</ion-content>

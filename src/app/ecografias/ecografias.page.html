@@ -1,0 +1,72 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>ecografias</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">ecografias</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>opciones</ion-title>
+  </ion-toolbar>
+  <div class="imagen1">
+    <img src="\assets\img\ecografias.jpeg" alt="limpieza bucal">
+    <h1>Ecografias</h1>
+      <p>¿Niño o Niña?</p>
+  </div>
+
+ 
+
+ <form #formulario="ngForm" (ngSubmit)="registrarcita(formulario)">
+   <ion-list>
+     <ion-row>
+       <ion-col>
+         <ion-item>
+           <ion-label position="floating">nombre</ion-label>
+           <ion-input type="text"  required name="nombre" ngModel></ion-input>
+         </ion-item>
+       </ion-col>
+     </ion-row>
+ 
+     <ion-row>
+       <ion-col>
+         <ion-item>
+           <ion-label position="floating">raza</ion-label>
+           <ion-input type="text"  required name="raza" ngModel></ion-input>
+         </ion-item>
+       </ion-col>
+     </ion-row>
+ 
+     <ion-row>
+       <ion-col>
+         <ion-item>
+           <ion-label position="floating">edad</ion-label>
+           <ion-input type="text" required name="edad" ngModel></ion-input>
+         </ion-item>
+       </ion-col>
+     </ion-row>
+
+     
+ 
+     <ion-row>
+       <ion-col>
+         <ion-button expand="block"  routesLink="/atencion-medica" type="submit">PEDIR CITA</ion-button>
+       </ion-col>
+     </ion-row>
+
+     <ion-row>
+       <ion-col>
+         <ion-button expand="block" routerLink="/atencion-medica">cancelar</ion-button>
+       </ion-col>
+     </ion-row>
+   </ion-list>
+ </form>
+
+</ion-content>

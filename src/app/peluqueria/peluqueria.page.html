@@ -1,0 +1,84 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>peluqueria</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">peluqueria</ion-title>
+    </ion-toolbar>
+
+  </ion-header>
+  <div class="logo-text">
+    <img src="assets/img/Pegatina for Sale con la obra Veterinario de megnance27.jpeg" alt="logo">
+    <label for=""><h1>zooheath</h1></label>
+  </div>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>opciones</ion-title>
+  </ion-toolbar>
+
+  <div>
+    <img src="\assets\img\peluqueria.jpeg" alt="peluqueria">
+    <h1>Peluqueria
+    </h1>
+    <p>¿que tal un corte para nuestro amigo?</p>
+  </div>
+
+  <form #formulario="ngForm" (ngSubmit)="registrarcita(formulario)">
+    <ion-list>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">nombre</ion-label>
+            <ion-input type="text"  required name="nombre" ngModel></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+  
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">fecha</ion-label>
+            <ion-input type="text"  required name="raza" ngModel></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+  
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">tipo de corte</ion-label>
+            <ion-input type="text" required name="edad" ngModel></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+  
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">valor</ion-label>
+            <ion-input type="text"  required name="sexo" ngModel></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+  
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block"  routesLink="/atencion-medica" type="submit">PEDIR CITA</ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" routerLink="/atencion-medica">cancelar</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-list>
+  </form>
+
+</ion-content>
