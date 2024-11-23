@@ -1,5 +1,7 @@
 {
   "name": "zoohealth",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
